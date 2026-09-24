@@ -1,4 +1,4 @@
-﻿# CompNeuro2026
+# CompNeuro2026
 
 Code for Computational Neuroscience (APPM 4370/5370).
 
@@ -12,3 +12,14 @@ Code for Computational Neuroscience (APPM 4370/5370).
 - hw1_p5a_voltage_traces.png: Voltage traces below and above rheobase for Problem 5(a).
 - hw1_p5b_fi_curve.png: f-I curve for Problem 5(b).
 - hw1_p5c_fi_overlay.png: Comparison of f-I curves for Problem 5(c).
+
+## hw2_code
+
+- hw2_p1c_wave_speed.py: Active McKean front speed vs passive apparent speed for Problem 1(c).
+- hw2_p2c_nmda_iv.py: Numerical root finding and I-V relation for NMDA receptor with magnesium block for Problem 2(c).
+- hw2_p4d_shot_noise_histograms.py: Direct simulation of shot noise and histogram overlay with matched Gaussians for Problem 4(d).
+- hw2_p5c_density_simulation.py: Euler-Maruyama simulation of noisy integrator with reset and theoretical density overlay for Problem 5(c).
+- hw2_p1c_wave_speed.png: Active front speed vs passive apparent speed plot for Problem 1(c).
+- hw2_p2c_nmda_iv.png: NMDA receptor I-V curve with magnesium block for Problem 2(c).
+- hw2_p4d_shot_noise_histograms.png: Shot noise voltage histograms overlaid with matched Gaussians for Problem 4(d).
+- hw2_p5c_density_simulation.png: Subthreshold voltage histograms and theoretical stationary density overlay for Problem 5(c).
