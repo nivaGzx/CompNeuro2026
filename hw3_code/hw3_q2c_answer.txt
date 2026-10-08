@@ -1,0 +1,49 @@
+PROBLEM 2(c): Phase Response Curves (LIF & FitzHugh-Nagumo)
+===========================================================================
+1. Leaky Integrate-and-Fire (LIF) Results:
+   - Parameters: tau = 1.0, vr = 0.0, vth = 1.0, I = 1.5
+   - Firing Period: Delta = ln(3) = 1.0986
+   - Perturbation size: delta_v = 0.001
+   - PRC Range: [0.6135, 1.8006]
+   - Max numerical vs analytic error: 1.7833e-03
+   - Firing regime: Strictly positive PRC (R(phi) > 0 for all phi).
+   - Classification: TYPE I PRC (strictly excitatory advances, no delay).
+
+   Phase phi    Exact R(phi)     Numeric R(phi)   Abs Error
+   ------------------------------------------------------------
+   0.10         0.6773           0.6775           2.5211e-04
+   0.30         0.8437           0.8441           3.9128e-04
+   0.50         1.0511           1.0517           6.0729e-04
+   0.70         1.3093           1.3103           9.4260e-04
+   0.90         1.6311           1.6325           1.4631e-03
+   ------------------------------------------------------------
+
+2. FitzHugh-Nagumo (FHN) Oscillator PRC Results:
+   - Oscillator Period: Delta = 39.4744
+   - Maximum PRC value: R_max = 0.2834 at phase phi = 0.888 (Advance)
+   - Minimum PRC value: R_min = -0.1167 at phase phi = 0.300 (Delay)
+   - Negative region (R < 0): phi in [0.225, 0.788]
+   - Classification: TYPE II PRC (biphasic, contains negative and positive lobes).
+
+3. Answers to Problem 2(c) Questions:
+   (a) Which PRC is Type I and which is Type II?
+       - LIF neuron has a TYPE I PRC:
+         R(phi) >= 0 everywhere over the cycle. Any depolarizing kick
+         moves the voltage closer to threshold, strictly advancing the next spike.
+       - FitzHugh-Nagumo oscillator has a TYPE II PRC:
+         R(phi) is biphasic, possessing a substantial negative lobe (R < 0)
+         as well as a positive lobe (R > 0).
+
+   (b) What does a negative lobe mean physically?
+       - Definition: A negative PRC value (R(phi) < 0) means that a depolarizing
+         perturbation causes a PHASE DELAY (the next spike fires LATER than
+         unperturbed, T' > Delta).
+       - Biophysical Mechanism in FHN:
+         In the FitzHugh-Nagumo model, during the downstroke and refractory phase
+         (phi in [0.225, 0.788]), the slow recovery variable w is elevated.
+         An extra depolarizing kick in v slightly increases v, but because
+         dw/dt = 0.08*(v + 0.7 - 0.8*w), it accelerates the production of outward
+         recovery variable w. The increased outward current deepens and prolongs
+         the hyperpolarization valley, trapping the state longer before it can
+         initiate the next upstroke. Hence, excitation paradoxically delays firing!
+===========================================================================

@@ -23,3 +23,16 @@ Code for Computational Neuroscience (APPM 4370/5370).
 - hw2_p2c_nmda_iv.png: NMDA receptor I-V curve with magnesium block for Problem 2(c).
 - hw2_p4d_shot_noise_histograms.png: Shot noise voltage histograms overlaid with matched Gaussians for Problem 4(d).
 - hw2_p5c_density_simulation.png: Subthreshold voltage histograms and theoretical stationary density overlay for Problem 5(c).
+
+## hw3_code
+
+- hw3_q1c.py: Simulation of periodically forced LIF, root finding for Devil's staircase, and Arnold tongue boundaries for Problem 1(c).
+- hw3_q2c.py: Direct perturbation measurement of PRCs for LIF and FitzHugh-Nagumo oscillator for Problem 2(c).
+- hw3_q4c.py: RK4 simulation of gap-junction coupled QIF neurons and decay rate fitting of phase lag for Problem 4(c).
+- hw3_q1c_devils_staircase.png: Devil's staircase firing number curve with Arnold tongue and plateau markings for Problem 1(c).
+- hw3_q2c_prc.png: Phase response curves for LIF (Type I) and FitzHugh-Nagumo (Type II) for Problem 2(c).
+- hw3_q4c_gap_junction.png: Phase lag relaxation and semilog decay rate comparison for Problem 4(c).
+- hw3_q1c_answer.txt: Numerical results and analytical answers for Problem 1(c).
+- hw3_q2c_answer.txt: Numerical results and analytical answers for Problem 2(c).
+- hw3_q4c_answer.txt: Numerical results and analytical answers for Problem 4(c).
+

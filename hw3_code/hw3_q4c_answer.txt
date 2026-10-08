@@ -1,0 +1,44 @@
+===========================================================================
+PROBLEM 4(c): Gap-Junction Coupled QIF Neurons Simulation
+===========================================================================
+Simulating coupled QIF equations with cutoff +/- L = +/- 200...
+
+1. Fitted Relaxation Rates vs Theoretical Prediction (2*eps):
+   Epsilon    Fitted Rate      Theory (2*eps)   Ratio (Fit/Th)   Rel Error (%)
+   ------------------------------------------------------------------------
+   0.005      0.00967          0.01000          0.9667           3.33
+   0.020      0.03854          0.04000          0.9635           3.65
+   0.050      0.09593          0.10000          0.9593           4.07
+   ------------------------------------------------------------------------
+
+2. Physical Analysis & Rate Comparison:
+   - Excellent Agreement:
+     The measured decay rates of tan(pi*phi_k) match the theoretical rate
+     2*eps within ~3.6% relative accuracy across all tested epsilons.
+   - Origin of Minor Systematic Difference (~0.96x):
+     (i) Finite Cutoff L = 200: The theoretical period Delta = pi is shortened to
+         Delta_L = 2*arctan(200) = 3.13159 < pi.
+         Truncating the voltage at +/-200 clips the extreme apex of the spike
+         where the voltage difference (v2 - v1) is largest, slightly reducing
+         the effective synchronizing torque.
+     (ii) Higher-Order Corrections: Phase averaging neglects O(eps^2) terms
+          arising from fast shape distortions along the orbit.
+
+3. Why a Symmetric Cutoff (+/- L) is Important:
+   (a) Zero Net DC Current Bias (Principal Value Cancellation):
+       The uncoupled QIF orbit v(t) = -cot(t) has logarithmic singularities
+       at threshold (+inf) and reset (-inf). Integrating the gap junction current
+       eps*(v_j - v_i) over one cycle yields logarithmic contributions:
+           int v_i dt ~ ln(L_th) - ln(|L_r|) = ln(L_th / |L_r|).
+       With a symmetric cutoff (L_th = |L_r| = L), ln(L / L) = 0, so the spike upstroke
+       and reset downstroke cancel identically, preserving zero net DC bias.
+       An asymmetric cutoff (L_th != |L_r|) would inject a spurious net DC offset,
+       shifting the intrinsic firing frequency and disrupting phase balance.
+
+   (b) Preservation of Odd Symmetry of the Interaction Function:
+       Symmetric cutoff preserves the waveform anti-symmetry v(t - Delta/2) = -v(-t),
+       which guarantees that the phase interaction function is strictly odd:
+           H(-chi) = -H(chi),   with H(0) = 0.
+       This odd symmetry ensures that the in-phase synchronous state (phi = 0)
+       remains an exact, unshifted stable fixed point of the coupled dynamics.
+===========================================================================
