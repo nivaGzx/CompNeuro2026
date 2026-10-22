@@ -36,11 +36,3 @@ Code for Computational Neuroscience (APPM 4370/5370).
 - hw3_q2c_answer.txt: Numerical results and analytical answers for Problem 2(c).
 - hw3_q4c_answer.txt: Numerical results and analytical answers for Problem 4(c).
 
-## hw4_code
-
-- hw4_q1c.py: FFT-based forward Euler simulation of ocular-dominance stripes on a 200-site ring for Problem 1(c).
-- hw4_q1c_patterns.png: Final eye-preference patterns for the two inhibitory widths.
-- hw4_q1c_period_comparison.png: Twenty measured stripe periods per width against continuum and finite-ring predictions.
-- hw4_q1c_trials.csv: Stripe-pair counts and periods for all 20 initial conditions at each width.
-- hw4_q1c_answer.txt: Structured numerical report and submission-ready summary.
-
